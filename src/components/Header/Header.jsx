@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaUniversalAccess } from 'react-icons/fa';
 import './Header.css';
 
 function Header() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const closeMenu = () => {
     const closeButton = document.querySelector('.offcanvas .btn-close');
     if (closeButton) {
@@ -44,7 +47,7 @@ function Header() {
 
       {/* মেইন নেভিগেশন বার */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white main-navbar shadow-sm py-2">
-        {/* container ব্যবহার করা হয়েছে যাতে সব স্ক্রিনে একই মার্জিন থাকে */}
+        {/* container ব্যবহার করা হয়েছে যাতে সব স্ক্রিনে একই মার্জিন থাকে */}
         <div className="container">
           <div className="logo-area d-flex align-items-center">
             <Link to="/">
@@ -72,8 +75,59 @@ function Header() {
             </ul>
           </div>
 
-          <div className="nav-action d-none d-lg-block">
-            <Link to="/kontakt" className="btn btn-quote px-4 py-2 text-white fw-bold" style={{ backgroundColor: '#0f2c59' }}>
+          <div className="nav-action d-none d-lg-flex align-items-center gap-3">
+            {/* Accessibility Dropdown */}
+            <div 
+              className="position-relative py-2" 
+              onMouseEnter={() => setIsDropdownOpen(true)} 
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+             <div 
+                className="d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                style={{ 
+                  width: '26px', 
+                  height: '26px', 
+                  backgroundColor: '#f8f9fa', 
+                  cursor: 'pointer', 
+                  border: '1px solid #dee2e6',
+                  /* 👇 এখান থেকে ডানে এবং বামে মার্জিন পরিবর্তন করতে পারবেন 👇 */
+                  marginLeft: '10px', 
+                  marginRight: '20px' 
+                }}
+              >
+                <FaUniversalAccess style={{ color: '#0f2c59', fontSize: '20px' }} />
+              </div>
+              {isDropdownOpen && (
+                <div 
+                  className="dropdown-menu-custom shadow position-absolute bg-white rounded py-2 border"
+                  style={{ right: '0', top: '100%', minWidth: '230px', zIndex: 1000 }}
+                >
+                  <ul className="list-unstyled mb-0 small fw-bold text-start">
+                    <li className="py-2 px-3 border-bottom">
+                      <Link to="/leichte-sprache" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                        Leichte Sprache
+                      </Link>
+                    </li>
+                    <li className="py-2 px-3 border-bottom">
+                      <Link to="/Gebärdensprache" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                        Gebärdensprache
+                      </Link>
+                    </li>
+                    <li className="py-2 px-3">
+                      <Link to="/Barrierefreiheit" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                        Barrierefreiheit
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <Link 
+              to="/kontakt" 
+              className="btn btn-quote px-3 py-2 text-white fw-bold text-nowrap" 
+              style={{ backgroundColor: '#0f2c59', fontSize: '14px', position: 'relative', bottom: '2px' }}
+            >
               GRATIS ANGEBOT →
             </Link>
           </div>
@@ -94,6 +148,17 @@ function Header() {
             <li className="nav-item"><Link to="/referenzen" className="nav-link" onClick={closeMenu}>REFERENZEN</Link></li>
             <li className="nav-item"><Link to="/kontakt" className="nav-link" onClick={closeMenu}>KONTAKT</Link></li>
           </ul>
+
+          {/* মোবাইল মেনুর ভেতরেও এক্সেসিবিলিটি অপশন যুক্ত করা হলো */}
+          <div className="mt-3 pt-3 border-top">
+            <div className="fw-bold mb-2 text-muted small">BARRIEREFREIHEIT</div>
+            <ul className="list-unstyled ps-2 gap-2 d-flex flex-column">
+              <li><Link to="/leichte-sprache" className="text-decoration-none text-dark" onClick={closeMenu}>• Leichte Sprache</Link></li>
+              <li><Link to="/Gebärdensprache" className="text-decoration-none text-dark" onClick={closeMenu}>• Gebärdensprache</Link></li>
+              <li><Link to="/Barrierefreiheit" className="text-decoration-none text-dark" onClick={closeMenu}>• Barrierefreiheit</Link></li>
+            </ul>
+          </div>
+
           <div className="mt-4">
             <Link to="/kontakt" className="btn w-100 fw-bold" style={{ backgroundColor: '#0f2c59', color: '#fff' }} onClick={closeMenu}>
               GRATIS ANGEBOT →

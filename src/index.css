@@ -1,7 +1,7 @@
 /* গ্লোবাল মার্জিন কন্ট্রোল */
 :root {
   --site-max-width: 1200px;
-  --site-padding: 15px;
+  --site-padding: 10px;
 }
 
 body {

@@ -5,6 +5,9 @@ import References from './pages/References/References';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Services from './pages/Services/Services'; // ইমপোর্ট করা আছে
 import Contact from './pages/Contact/Contact'; 
+import EasyLanguage from './pages/Language/EasyLanguage';
+import Signlanguage from './pages/Language/Signlanguage';
+import Accessibilitystatement from './pages/Language/Accessibilitystatement';
 import Header from './components/Header/Header'; 
 import Footer from './components/Footer/Footer';
 
@@ -24,6 +27,9 @@ function App() {
         
         {/* Contact পেজ */}
         <Route path="/kontakt" element={<Contact />} /> 
+        <Route path="/leichte-sprache" element={<EasyLanguage />} />
+            <Route path="/Gebärdensprache" element={<Signlanguage />} />
+            <Route path="/Barrierefreiheit" element={<Accessibilitystatement />} />
       </Routes>
       <Footer />
     </Router>
