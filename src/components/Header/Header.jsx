@@ -47,7 +47,6 @@ function Header() {
 
       {/* মেইন নেভিগেশন বার */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white main-navbar shadow-sm py-2">
-        {/* container ব্যবহার করা হয়েছে যাতে সব স্ক্রিনে একই মার্জিন থাকে */}
         <div className="container">
           <div className="logo-area d-flex align-items-center">
             <Link to="/">
@@ -78,43 +77,28 @@ function Header() {
           <div className="nav-action d-none d-lg-flex align-items-center gap-3">
             {/* Accessibility Dropdown */}
             <div 
-              className="position-relative py-2" 
+              className="position-relative py-2 accessibility-dropdown-wrapper" 
               onMouseEnter={() => setIsDropdownOpen(true)} 
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-             <div 
-                className="d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                style={{ 
-                  width: '26px', 
-                  height: '26px', 
-                  backgroundColor: '#f8f9fa', 
-                  cursor: 'pointer', 
-                  border: '1px solid #dee2e6',
-                  /* 👇 এখান থেকে ডানে এবং বামে মার্জিন পরিবর্তন করতে পারবেন 👇 */
-                  marginLeft: '10px', 
-                  marginRight: '20px' 
-                }}
-              >
-                <FaUniversalAccess style={{ color: '#0f2c59', fontSize: '20px' }} />
+              <div className="d-flex align-items-center justify-content-center rounded-circle shadow-sm accessibility-icon-box">
+                <FaUniversalAccess className="accessibility-icon" />
               </div>
               {isDropdownOpen && (
-                <div 
-                  className="dropdown-menu-custom shadow position-absolute bg-white rounded py-2 border"
-                  style={{ right: '0', top: '100%', minWidth: '230px', zIndex: 1000 }}
-                >
+                <div className="dropdown-menu-custom shadow position-absolute bg-white rounded py-2 border">
                   <ul className="list-unstyled mb-0 small fw-bold text-start">
                     <li className="py-2 px-3 border-bottom">
-                      <Link to="/leichte-sprache" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                      <Link to="/leichte-sprache" className="dropdown-link" onClick={() => setIsDropdownOpen(false)}>
                         Leichte Sprache
                       </Link>
                     </li>
                     <li className="py-2 px-3 border-bottom">
-                      <Link to="/Gebärdensprache" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                      <Link to="/Gebärdensprache" className="dropdown-link" onClick={() => setIsDropdownOpen(false)}>
                         Gebärdensprache
                       </Link>
                     </li>
                     <li className="py-2 px-3">
-                      <Link to="/Barrierefreiheit" style={{ textDecoration: 'none', color: '#0f2c59' }} onClick={() => setIsDropdownOpen(false)}>
+                      <Link to="/Barrierefreiheit" className="dropdown-link" onClick={() => setIsDropdownOpen(false)}>
                         Barrierefreiheit
                       </Link>
                     </li>
@@ -123,11 +107,7 @@ function Header() {
               )}
             </div>
 
-            <Link 
-              to="/kontakt" 
-              className="btn btn-quote px-3 py-2 text-white fw-bold text-nowrap" 
-              style={{ backgroundColor: '#0f2c59', fontSize: '14px', position: 'relative', bottom: '2px' }}
-            >
+            <Link to="/kontakt" className="btn btn-quote px-3 py-2 text-white fw-bold text-nowrap">
               GRATIS ANGEBOT →
             </Link>
           </div>
@@ -137,7 +117,7 @@ function Header() {
       {/* মোবাইল স্লাইডার মেনু */}
       <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasNavbar">
         <div className="offcanvas-header bg-light border-bottom">
-          <h5 className="offcanvas-title fw-bold" style={{ color: '#0f2c59' }}>S.I.B.A.G</h5>
+          <h5 className="offcanvas-title fw-bold offcanvas-brand-title">S.I.B.A.G</h5>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
@@ -160,7 +140,7 @@ function Header() {
           </div>
 
           <div className="mt-4">
-            <Link to="/kontakt" className="btn w-100 fw-bold" style={{ backgroundColor: '#0f2c59', color: '#fff' }} onClick={closeMenu}>
+            <Link to="/kontakt" className="btn w-100 fw-bold offcanvas-btn-quote" onClick={closeMenu}>
               GRATIS ANGEBOT →
             </Link>
           </div>

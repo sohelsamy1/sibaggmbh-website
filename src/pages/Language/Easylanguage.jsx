@@ -51,7 +51,7 @@ const EasyLanguage = () => {
               <div className="card-body p-4 d-flex flex-column justify-content-between" style={{ backgroundColor: '#ffffff' }}>
                 <div>
                   <h3 className="h4 fw-bold mb-3">
-                    <Link to="/accessibility-statement" className="text-decoration-none" style={{ color: '#0f2c59' }}>
+                    <Link to="/Barrierefreiheit" className="text-decoration-none" style={{ color: '#0f2c59' }}>
                       Erklärung zur Barrierefreiheit
                     </Link>
                   </h3>
@@ -61,7 +61,7 @@ const EasyLanguage = () => {
                 </div>
                 <div>
                   <Link 
-                    to="/accessibility-statement" 
+                    to="/Barrierefreiheit" 
                     className="btn btn-sm fw-bold px-3 py-2 text-white" 
                     style={{ backgroundColor: '#82b440', border: 'none' }}
                   >
@@ -81,7 +81,7 @@ const EasyLanguage = () => {
               <div className="card-body p-4 d-flex flex-column justify-content-between" style={{ backgroundColor: '#ffffff' }}>
                 <div>
                   <h3 className="h4 fw-bold mb-3">
-                    <Link to="/sign-language" className="text-decoration-none" style={{ color: '#0f2c59' }}>
+                    <Link to="/Gebärdensprache" className="text-decoration-none" style={{ color: '#0f2c59' }}>
                       Gebärdensprache
                     </Link>
                   </h3>
@@ -91,7 +91,7 @@ const EasyLanguage = () => {
                 </div>
                 <div>
                   <Link 
-                    to="/sign-language" 
+                    to="/Gebärdensprache" 
                     className="btn btn-sm fw-bold px-3 py-2 text-white" 
                     style={{ backgroundColor: '#82b440', border: 'none' }}
                   >
