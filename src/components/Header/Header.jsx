@@ -50,7 +50,7 @@ function Header() {
         <div className="container">
           <div className="logo-area d-flex align-items-center">
             <Link to="/">
-              <img src="/logo.webp" alt="S.I.B.A.G Logo" className="site-logo" />
+              <img src="/logo.webp" alt="S.I.B.A.G" className="site-logo" />
             </Link>
           </div>
 

@@ -1,83 +1,90 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer id="kontakt" style={{ backgroundColor: '#041d42', color: '#ffffff' }} className="py-5">
+    <footer id="kontakt" className="site-footer py-5">
       <div className="container">
         <div className="row g-4 text-center text-md-start justify-content-between">
           
           {/* ১. লোগো এবং ইমারজেন্সি BOX */}
           <div className="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-start">
-            <img src="/logo.webp" alt="SIBAG Logo" className="mb-4" style={{ maxWidth: '190px', height: 'auto' }} />
-            <div className="d-flex align-items-center p-2 border rounded mb-3 mb-md-0" style={{ width: '200px', borderColor: '#8cc63f' }}>
-              <div className="fw-bold me-3" style={{ fontSize: '24px', color: '#8cc63f' }}>24/7</div>
-              <div className="text-start" style={{ fontSize: '12px', lineHeight: '1.2' }}>
+            <img src="/logo.webp" alt="SIBAG Logo" className="footer-logo mb-4" />
+            
+            <div className="emergency-box d-flex align-items-center p-2 border rounded mb-3">
+              <div className="emergency-num fw-bold me-3">24/7</div>
+              <div className="text-start emergency-text">
                 <span className="fw-bold">NOTDIENST</span><br />
                 <span>AUF ANFRAGE</span>
               </div>
+            </div>
+
+            {/* সোশ্যাল মিডিয়া আইকনগুলো */}
+            <div className="social-icons-wrapper">
+              <a href="#" className="social-icon">
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="bi bi-twitter-x"></i>
+              </a>
             </div>
           </div>
 
           {/* ২. LEISTUNGEN */}
           <div className="col-6 col-md-2">
-            <h6 className="text-uppercase fw-bold mb-3" style={{ color: '#8cc63f', fontSize: '15px' }}>LEISTUNGEN</h6>
+            <h6 className="footer-heading text-uppercase fw-bold mb-3">LEISTUNGEN</h6>
             <ul className="list-unstyled ps-0">
-              <li className="mb-1"><a href="#leistungen" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Gebäudereinigung</a></li>
-              <li className="mb-1"><a href="#leistungen" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Baureinigung</a></li>
-              <li className="mb-1"><a href="#leistungen" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Bauleistungen</a></li>
-              <li className="mb-1"><a href="#leistungen" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Facility Service</a></li>
+              <li className="mb-1"><a href="#leistungen" className="footer-link">Gebäudereinigung</a></li>
+              <li className="mb-1"><a href="#leistungen" className="footer-link">Baureinigung</a></li>
+              <li className="mb-1"><a href="#leistungen" className="footer-link">Bauleistungen</a></li>
+              <li className="mb-1"><a href="#leistungen" className="footer-link">Facility Service</a></li>
             </ul>
           </div>
 
           {/* ৩. UNTERNEHMEN */}
           <div className="col-6 col-md-2">
-            <h6 className="text-uppercase fw-bold mb-3" style={{ color: '#8cc63f', fontSize: '15px' }}>UNTERNEHMEN</h6>
+            <h6 className="footer-heading text-uppercase fw-bold mb-3">UNTERNEHMEN</h6>
             <ul className="list-unstyled ps-0">
-              <li className="mb-1"><a href="#uber-uns" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Über uns</a></li>
-              <li className="mb-1"><a href="#referenzen" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Referenzen</a></li>
-              <li className="mb-1"><a href="#kontakt" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Karriere</a></li>
-              <li className="mb-1"><a href="#kontakt" className="text-white text-decoration-none opacity-75" style={{ fontSize: '13.5px' }}>Kontakt</a></li>
+              <li className="mb-1"><a href="#uber-uns" className="footer-link">Über uns</a></li>
+              <li className="mb-1"><a href="#referenzen" className="footer-link">Referenzen</a></li>
+              <li className="mb-1"><a href="#kontakt" className="footer-link">Karriere</a></li>
+              <li className="mb-1"><a href="#kontakt" className="footer-link">Kontakt</a></li>
             </ul>
           </div>
 
-          {/* ৪. KONTAKT (স্মার্ট অ্যালাইনমেন্ট) */}
-              <div className="col-12 col-md-3">
-                <h6 className="text-uppercase fw-bold mb-3" style={{ color: '#8cc63f', fontSize: '15px' }}>KONTAKT</h6>
-                <ul className="list-unstyled ps-0" style={{ fontSize: '14px' }}>
-                  <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                    <span>📞</span> <span>+49 172 6302135</span>
-                  </li>
-                  <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                    <span>✉️</span> <span>Info.sibaggmbh@web.de</span>
-                  </li>
-                  <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                    <span>📍</span> <span>Ebersstraße 61, 10827 Berlin</span>
-                  </li>
-                </ul>
+          {/* ৪. KONTAKT */}
+          <div className="col-12 col-md-3">
+            <h6 className="footer-heading text-uppercase fw-bold mb-3">KONTAKT</h6>
+            <ul className="list-unstyled ps-0 contact-list">
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>📞</span> <span>+49 172 6302135</span>
+              </li>
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>✉️</span> <span>Info.sibaggmbh@web.de</span>
+              </li>
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>📍</span> <span>Ebersstraße 61, 10827 Berlin</span>
+              </li>
+            </ul>
              
-              {/* ট্যাক্স আইডি সেকশন - গ্যাপ ঠিক করে দেওয়া হয়েছে */}
-           <div style={{ 
-                fontSize: '14px', 
-                color: '#a0aec0', 
-                lineHeight: '1.6', 
-                marginTop: '-9px', // এখানে মানটি বাড়িয়ে বা কমিয়ে পজিশন অ্যাডজাস্ট করুন
-                position: 'relative', // এটি পজিশনিং ঠিক রাখতে সাহায্য করবে
-                zIndex: 1 
-              }}>
-                <div style={{ display: 'block' }}>
-                  Umsatz ID Nr:&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-white">DE463530931</span>
-                </div>
-                <div style={{ display: 'block' }}>
-                  Steuern Nr: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-white">29/533/31003</span>
-                </div>
-                  <div style={{ display: 'block' }}>
-                  HRB: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-white">288 177 B</span>
-                </div>
+            {/* ট্যাক্স আইডি সেকশন */}
+            <div className="tax-info-section">
+              <div className="tax-row">
+                Umsatz ID Nr:&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">DE463530931</span>
               </div>
-
+              <div className="tax-row">
+                Steuern Nr: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">29/533/31003</span>
+              </div>
+              <div className="tax-row">
+                HRB: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">288 177 B</span>
+              </div>
+            </div>
 
           </div>
         </div>

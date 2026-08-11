@@ -54,10 +54,12 @@ function Hero() {
           </div>
 
           <div className="d-flex flex-wrap gap-3">
-            <a href="#angebot" className="btn fw-bold text-white px-4 py-3 text-uppercase" style={{ backgroundColor: '#72b22f', fontSize: '13px' }}>
+            <a href="/kontakt" className="btn fw-bold text-white px-4 py-3 text-uppercase" style={{ backgroundColor: '#72b22f', fontSize: '13px' }}>
               KOSTENLOSES ANGEBOT ANFORDERN →
             </a>
-            <a href="#mehr-erfahren" className="btn btn-outline-light fw-bold px-4 py-3 text-uppercase" style={{ fontSize: '13px' }}>
+            <a href="/SIBAG_Brochure.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"  className="btn btn-outline-light fw-bold px-4 py-3 text-uppercase" style={{ fontSize: '13px' }}>
               MEHR ERFAHREN →
             </a>
           </div>

@@ -1,0 +1,91 @@
+/* Footer.css */
+
+.site-footer {
+  background-color: #041d42;
+  color: #ffffff;
+}
+
+.footer-logo {
+  max-width: 190px;
+  height: auto;
+}
+
+.emergency-box {
+  width: 200px;
+  border-color: #8cc63f !important;
+}
+
+.emergency-num {
+  font-size: 24px;
+  color: #8cc63f;
+}
+
+.emergency-text {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.footer-heading {
+  color: #8cc63f;
+  font-size: 15px;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.75;
+  font-size: 13.5px;
+}
+
+.contact-list {
+  font-size: 14px;
+}
+
+.tax-info-section {
+  font-size: 14px;
+  color: #a0aec0;
+  line-height: 1.6;
+  margin-top: -9px;
+  position: relative;
+  z-index: 1;
+}
+
+.tax-row {
+  display: block;
+}
+
+/* সোশ্যাল মিডিয়া আইকন ও সার্কেল স্টাইল */
+.social-icons-wrapper {
+  position: relative;
+  top: 3px;
+  display: flex !important;
+  justify-content: flex-start;
+  margin-left: 33px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: none;
+  margin-right: 17px; /* এই মার্জিনটিই আইকনগুলোর মাঝে নিশ্চিতভাবে গ্যাপ তৈরি করবে */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #8cc63f;
+  color: #fafafa;
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.social-icon i {
+  vertical-align: middle;
+}
