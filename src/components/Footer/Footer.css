@@ -89,3 +89,18 @@
 .social-icon i {
   vertical-align: middle;
 }
+
+/* মোবাইল বা ছোট স্ক্রিনের জন্য (700px এর নিচে) */
+@media screen and (max-width: 700px) {
+  .social-icons-wrapper {
+    position: relative;
+    top: 3px;     /* ওপর থেকে নিচ বা ওপরের দিকে সরানোর জন্য */
+    bottom: 30px;  /* নিচ থেকে ওপর বা নিচের পজিশন অ্যাডজাস্ট করার জন্য */
+    display: flex !important;
+    justify-content: center; /* মোবাইল স্ক্রিনে মাঝখানে রাখার জন্য */
+    margin-left: 18px; /* মোবাইলের বাম পাশের মার্জিন */
+  }
+  .social-icons-wrapper {
+    margin-bottom: 15px; /* সোশ্যাল আইকন বা ওপরের অংশের নিচে গ্যাপ বাড়াতে */
+  }
+}
