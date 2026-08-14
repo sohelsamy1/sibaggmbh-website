@@ -33,3 +33,18 @@
 .btn-submit:hover {
     background-color: #7ab237 !important;
 }
+
+/* ডেটপিকারের বক্সটিকে শতভাগ প্রশস্ত করার জন্য */
+.react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+}

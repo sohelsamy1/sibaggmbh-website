@@ -2,12 +2,17 @@ import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async'; // ইমপোর্ট করা হয়েছে
 import emailjs from '@emailjs/browser';
 import Select from 'react-select';
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import './Contact.css';
 
 const ContactPage = () => {
   const form = useRef();
   const [selectedOption, setSelectedOption] = useState(null);
   const [successMessage, setSuccessMessage] = useState(''); // সাকসেস মেসেজ স্টেট
+  const [startDate, setStartDate] = useState(null); // ডেটপিকারের জন্য স্টেট
 
   const options = [
     { value: 'Gebäudereinigung', label: 'Gebäudereinigung' },
@@ -39,6 +44,7 @@ const ContactPage = () => {
       .then((result) => {
         setSuccessMessage("Nachricht erfolgreich gesendet!"); // সাকসেস মেসেজ সেট
         form.current.reset(); // ফর্ম খালি হবে
+        setStartDate(null); // ফর্ম সাবমিটের পর ডেটপিকার খালি হবে
         setSelectedOption(null); // ড্রপডাউন খালি হবে
         
         // ৫ সেকেন্ড পর মেসেজটি অদৃশ্য হয়ে যাবে
@@ -125,7 +131,23 @@ const ContactPage = () => {
                 
                 {/* নতুন ৩টি ফিল্ড */}
                 <div className="col-md-6"><input type="text" name="stadt_plz" className="form-control" placeholder="Stadt / PLZ" /></div>
-                <div className="col-md-6"><input type="date" name="datum" className="form-control" placeholder="Datum" /></div>
+
+               <div className="col-md-6">
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  dateFormat="dd/MM/yyyy"
+                  className="form-control"
+                  placeholderText="Datum auswählen"
+                  autoComplete="off"
+                />
+                <input 
+                  type="hidden" 
+                  name="datum" 
+                  value={startDate ? startDate.toLocaleDateString('de-DE') : ''} 
+                />
+              </div>
+
                 <div className="col-12"><input type="text" name="dringlichkeit" className="form-control" placeholder="Dringlichkeit (z.B. Sofort, Diese Woche)" /></div>
                 
                 {/* React-Select ড্রপডাউন */}
