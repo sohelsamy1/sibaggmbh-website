@@ -1,10 +1,10 @@
-# Company Portfolio Website
+# Sibaggmbh Website
 
 <p align="center">
   <a href="https://sibaggmbh.com" target="_blank">
     <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Website-success?style=for-the-badge" alt="Live Demo">
   </a>
-  <a href="https://github.com/sohelsamy1/sibaggmbh" target="_blank">
+  <a href="https://github.com/sohelsamy1/sibaggmbh-website" target="_blank">
     <img src="https://img.shields.io/badge/📂_Source_Code-GitHub-black?style=for-the-badge&logo=github" alt="GitHub Repository">
   </a>
 </p>
@@ -30,6 +30,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 </p>
+
+## 🚀 Overview
 
 A modern and responsive company portfolio website built entirely with **React.js**, featuring reusable components, SEO optimization, EmailJS integration, responsive layouts, and a clean user experience.
 
@@ -112,7 +114,7 @@ src
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/sohelsamy1/sibaggmbh.git
+git clone https://github.com/sohelsamy1/sibaggmbh-website.git
 ```
 
 ### Navigate to the Project Directory
@@ -168,7 +170,7 @@ npm run build
 
 **Laravel | React | Vue Developer**
 
-- **Portfolio:** https://sibaggmbh.com
+- **Portfolio:** https://sohelsamy.com
 - **GitHub:** https://github.com/sohelsamy1
 - **LinkedIn:** https://linkedin.com/in/sohelsamy
 
