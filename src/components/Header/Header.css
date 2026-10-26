@@ -138,6 +138,7 @@
   bottom: 2px;
 }
 
+<<<<<<< HEAD
 /* মেইন নেভিগেশন কন্টেইনার ফ্লেক্স করে মেনু ডানে সরানোর জন্য */
 .main-navbar .container {
   max-width: 1320px !important;
@@ -157,6 +158,9 @@
   margin-left: auto;
   margin-right: 60px;
 }
+=======
+
+>>>>>>> e6a1b14580d67d3a157cb2c3f01b560b8b601880
 
 #startseite, #leistungen, #uber-uns, #referenzen, #kontakt, #angebot { scroll-margin-top: 110px; }
 

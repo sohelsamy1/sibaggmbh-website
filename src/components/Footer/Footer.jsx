@@ -59,6 +59,7 @@ const Footer = () => {
           <div className="col-12 col-md-3">
             <h6 className="footer-heading text-uppercase fw-bold mb-3">KONTAKT</h6>
             <ul className="list-unstyled ps-0 contact-list">
+<<<<<<< HEAD
               <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
                 <i className="bi bi-telephone-fill"></i> <span>+49 172 6302135</span>
               </li>
@@ -86,6 +87,32 @@ const Footer = () => {
                 <i className="bi bi-building me-2"></i>
                 <span style={{ minWidth: '90px', textAlign: 'left' }}>HRB:</span>
                 <span className="text-white ms-2">288 177 B</span>
+=======
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>📞</span> <span>+49 172 6302135</span>
+              </li>
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>✉️</span> <span>Info.sibaggmbh@web.de</span>
+              </li>
+              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                <span>📍</span> <span>Ebersstraße 61, 10827 Berlin</span>
+              </li>
+            </ul>
+             
+            {/* ট্যাক্স আইডি সেকশন */}
+            <div className="tax-info-section">
+              <div className="tax-row">
+                Umsatz ID Nr:&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">DE463530931</span>
+              </div>
+              <div className="tax-row">
+                Steuern Nr: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">29/533/31003</span>
+              </div>
+              <div className="tax-row">
+                HRB: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="text-white">288 177 B</span>
+>>>>>>> e6a1b14580d67d3a157cb2c3f01b560b8b601880
               </div>
             </div>
 
