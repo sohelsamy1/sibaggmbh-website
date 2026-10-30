@@ -58,8 +58,7 @@ const Footer = () => {
           {/* ৪. KONTAKT */}
           <div className="col-12 col-md-3">
             <h6 className="footer-heading text-uppercase fw-bold mb-3">KONTAKT</h6>
-            <ul className="list-unstyled ps-0 contact-list">
-<<<<<<< HEAD
+            <ul className="list-unstyled ps-0 contact-list mb-2">
               <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
                 <i className="bi bi-telephone-fill"></i> <span>+49 172 6302135</span>
               </li>
@@ -71,48 +70,25 @@ const Footer = () => {
               </li>
             </ul>
               
-           {/* ট্যাক্স আইডি সেকশন */}
-            <div className="tax-info-section mt-3">
-              <div className="tax-row d-flex align-items-center mb-1" style={{ whiteSpace: 'nowrap' }}>
+            {/* ট্যাক্স আইডি সেকশন - marginTop change kore upore/niche namate parben */}
+            <div 
+              className="tax-info-section d-inline-block d-md-block text-start"
+              style={{ marginTop: '1px', marginBottom: '0px' }}
+            >
+              <div className="tax-row d-flex align-items-center mb-1" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>
                 <i className="bi bi-card-heading me-2"></i>
-                <span style={{ minWidth: '90px', textAlign: 'left' }}>Umsatz ID Nr:</span>
+                <span style={{ minWidth: '95px', textAlign: 'left' }}>Umsatz ID Nr:</span>
                 <span className="text-white ms-2">DE463530931</span>
               </div>
-              <div className="tax-row d-flex align-items-center mb-1" style={{ whiteSpace: 'nowrap' }}>
+              <div className="tax-row d-flex align-items-center mb-1" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>
                 <i className="bi bi-receipt me-2"></i>
-                <span style={{ minWidth: '90px', textAlign: 'left' }}>Steuern Nr:</span>
+                <span style={{ minWidth: '95px', textAlign: 'left' }}>Steuern Nr:</span>
                 <span className="text-white ms-2">29/533/31003</span>
               </div>
-              <div className="tax-row d-flex align-items-center" style={{ whiteSpace: 'nowrap' }}>
+              <div className="tax-row d-flex align-items-center" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>
                 <i className="bi bi-building me-2"></i>
-                <span style={{ minWidth: '90px', textAlign: 'left' }}>HRB:</span>
+                <span style={{ minWidth: '95px', textAlign: 'left' }}>HRB:</span>
                 <span className="text-white ms-2">288 177 B</span>
-=======
-              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                <span>📞</span> <span>+49 172 6302135</span>
-              </li>
-              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                <span>✉️</span> <span>Info.sibaggmbh@web.de</span>
-              </li>
-              <li className="mb-2 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
-                <span>📍</span> <span>Ebersstraße 61, 10827 Berlin</span>
-              </li>
-            </ul>
-             
-            {/* ট্যাক্স আইডি সেকশন */}
-            <div className="tax-info-section">
-              <div className="tax-row">
-                Umsatz ID Nr:&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-white">DE463530931</span>
-              </div>
-              <div className="tax-row">
-                Steuern Nr: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-white">29/533/31003</span>
-              </div>
-              <div className="tax-row">
-                HRB: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-white">288 177 B</span>
->>>>>>> e6a1b14580d67d3a157cb2c3f01b560b8b601880
               </div>
             </div>
 

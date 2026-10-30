@@ -90,11 +90,6 @@
   vertical-align: middle;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e6a1b14580d67d3a157cb2c3f01b560b8b601880
 /* মোবাইল বা ছোট স্ক্রিনের জন্য (700px এর নিচে) */
 @media screen and (max-width: 700px) {
   .social-icons-wrapper {
