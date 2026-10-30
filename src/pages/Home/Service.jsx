@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function HomeService() {
+  // ==========================================
+  // IMAGE HEIGHT CONTROL: Apni ekhane '180px' er jaygay 
+  // nijer moto barate ba komate parben (e.g., '160px', '200px')
+  // ==========================================
+  const imgHeight = '210px'; 
+  const iconTop = '185px'; // imgHeight onujayi adjust kora holo
+
   const services = [
     { title: 'GEBÄUDEREINIGUNG', image: '/card1.webp', icon: '🏢', points: ['Unterhaltsreinigung', 'Büroreinigung', 'Treppenhausreinigung', 'Praxisreinigung', 'Industriereinigung', 'Sonderreinigung'] },
     { title: 'BAUREINIGUNG', image: '/card2.webp', icon: '🏗️', points: ['Baugrobreinigung', 'Bauzwischenreinigung', 'Bauendreinigung', 'Baustellenreinigung', 'Entsorgung von Bauschutt'] },
@@ -21,13 +28,17 @@ function HomeService() {
         <div className="row g-4">
           {services.map((service, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-3">
-              <div className="card h-100 border-0 shadow-sm bg-light d-flex flex-column position-relative">
-                {/* ইমেজ */}
-                <img src={service.image} alt={service.title} className="w-100" style={{ height: '180px', objectFit: 'cover' }} />
+              {/* Card container-e overflow-hidden ebong rounded-3 jog kora hoyeche */}
+              <div className="card h-100 border-0 shadow-sm bg-light d-flex flex-column position-relative overflow-hidden rounded-3">
+                
+                {/* ইমেজ সেকশন */}
+                <div className="w-100 bg-white d-flex align-items-center justify-content-center overflow-hidden" style={{ height: imgHeight }}>
+                  <img src={service.image} alt={service.title} className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                </div>
                 
                 {/* গোল আইকন */}
                 <div className="position-absolute d-flex align-items-center justify-content-center" 
-                     style={{ top: '140px', left: '50%', transform: 'translateX(-50%)', width: '50px', height: '50px', backgroundColor: '#0f2c59', color: '#fff', borderRadius: '50%', fontSize: '20px', border: '3px solid #f8f9fa', zIndex: 1 }}>
+                     style={{ top: iconTop, left: '50%', transform: 'translateX(-50%)', width: '50px', height: '50px', backgroundColor: '#0f2c59', color: '#fff', borderRadius: '50%', fontSize: '20px', border: '3px solid #f8f9fa', zIndex: 1 }}>
                   {service.icon}
                 </div>
 
@@ -41,7 +52,6 @@ function HomeService() {
                     ))}
                   </ul>
                   
-                  {/* আপডেট করা বাটন: অ্যারো আইকন ডান দিকে */}
                   <div className="mt-auto">
                     <Link to="/leistungen" className="btn w-100 fw-bold d-flex align-items-center justify-content-center" 
                       style={{ 
